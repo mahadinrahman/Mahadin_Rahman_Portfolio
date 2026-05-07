@@ -91,12 +91,13 @@ export default function Services() {
             <div 
               key={service.title} 
               ref={el => cardsRef.current[i] = el}
-              className="relative group h-full"
+              className="relative group h-full transform-gpu"
+              style={{ backfaceVisibility: 'hidden' }}
             >
               {/* Animated Gradient Border */}
               <div className="absolute -inset-[1px] bg-gradient-to-br from-brand-accent via-transparent to-amber-900 rounded-xl opacity-20 group-hover:opacity-100 transition-opacity duration-500 blur-[2px]"></div>
               
-              <div className="relative h-full bg-card rounded-xl p-8 flex flex-col items-center text-center border border-border-main group-hover:bg-card/80 transition-all shadow-sm hover:shadow-xl dark:shadow-none duration-500">
+              <div className="relative h-full bg-card rounded-xl p-8 flex flex-col items-center text-center border border-border-main group-hover:bg-card/80 transition-all shadow-sm hover:shadow-xl dark:shadow-none duration-500 subpixel-antialiased">
                 {/* Icon with glow */}
                 <div className="mb-6 relative">
                   <div className="absolute inset-0 bg-brand-accent/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity"></div>
