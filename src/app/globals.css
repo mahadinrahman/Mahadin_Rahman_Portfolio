@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-brand-dark: var(--background);
+  --color-brand-accent: #d97706;
+  --color-brand-muted: var(--brand-muted);
+  --color-card: var(--card-bg);
+  --color-border-main: var(--border-color);
+  
+  --font-sans: "Inter", system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --animate-pulse-ring: pulse-ring 4s infinite ease-in-out;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes pulse-ring {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(0.95); opacity: 0.5; }
   }
 }
 
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a; /* Deep Slate */
+  --brand-muted: #64748b; /* Slate 500 */
+  --card-bg: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.06);
+  --section-alt: #f8fafc;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --brand-muted: #94a3b8;
+  --card-bg: #1e293b;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --section-alt: #111827;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-ring {
+  animation: var(--animate-pulse-ring);
+}
+
+.accent-glow {
+  box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
+}
+
+@layer utilities {
+  .selection-accent::selection {
+    background-color: #d97706;
+    color: white;
+  }
+}
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.magnetic-area {
+  display: inline-block;
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-brand-accent);
+  transition: width 0.3s ease-out;
+}
+
+.link-underline:hover::after {
+  width: 100%;
 }
