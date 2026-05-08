@@ -13,7 +13,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerRef = useRef(null);
   const socialRef = useRef([]);
-  
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(socialRef.current, {
@@ -43,22 +43,23 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-10">
           <h2 className="text-3xl font-bold mb-2">Let&apos;s connect</h2>
-          <p className="text-brand-muted">Available for freelance or full-time roles</p>
+          <p className="text-brand-muted">Available for Freelance or  Remote roles</p>
         </div>
-        
+        <p className="text-brand-muted mb-2">Email:mahadinrahman333@gmail.com</p>
+        <p className="text-brand-muted mb-8">Mobile:+8801333796444</p>
         <div className="flex justify-center space-x-8 mb-12">
           {socialLinks.map((link, i) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               ref={el => socialRef.current[i] = el}
-              className="text-brand-muted hover:text-brand-accent transition-colors link-underline" 
+              className="text-brand-muted hover:text-brand-accent transition-colors link-underline"
               href={link.href}
             >
               {link.name}
             </Link>
           ))}
         </div>
-        
+
         <div className="text-xs text-brand-muted opacity-50 uppercase tracking-widest">
           © {currentYear} Mahadin Rahman. Built with precision.
         </div>

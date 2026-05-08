@@ -88,21 +88,21 @@ export default function About() {
         <div className="space-y-12" data-purpose="services-list">
           {/* Service items with Framer Motion Tilt */}
           {[
-            { 
-              title: "Web Developer", 
+            {
+              title: "Web Developer",
               icon: <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             },
-            { 
-              title: "Frontend Developer", 
+            {
+              title: "Frontend Developer",
               icon: <path d="M2 7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7zm6 14h8M12 17v4" />
             },
-            { 
-              title: "MERN Stack Developer", 
+            {
+              title: "MERN Stack Developer",
               icon: <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             }
           ].map((service, i) => (
             <div key={service.title} ref={el => cardsRef.current[i] = el} className="flex items-start space-x-6">
-              <motion.div 
+              <motion.div
                 whileHover={{ rotateY: 15, rotateX: -15, scale: 1.1 }}
                 className="mt-1 p-3 bg-card border border-border-main rounded-lg cursor-pointer"
               >
@@ -117,18 +117,18 @@ export default function About() {
             </div>
           ))}
         </div>
- 
+
         {/* About Text & Stats */}
         <div className="about-text" data-purpose="about-details">
           <h2 className="text-4xl font-bold mb-8">About me</h2>
           <p className="text-brand-muted leading-relaxed mb-12 max-w-xl">
-            Started my software journey from photography. Through that, I learned to love the process of creating things from scratch. Since then, this has led me to software development as it fulfills my love for learning and building things.
+            I’m Mahadin Rahman — a passionate MERN Stack Developer focused on building modern, interactive, and user-friendly web applications. I love turning creative ideas into real-world digital experiences using clean code and modern technologies.
           </p>
           <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border-main">
             {[
-              { value: 120, label: 'Completed Projects', suffix: '+' },
+              { value: 30, label: 'Completed Projects', suffix: '+' },
               { value: 95, label: 'Client Satisfaction', suffix: '%' },
-              { value: 10, label: 'Years of Experience', suffix: '+' },
+              { value: 1, label: 'Years of Experience', suffix: '+' },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-4xl font-bold mb-1">
