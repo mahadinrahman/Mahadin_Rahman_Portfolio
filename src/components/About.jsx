@@ -89,16 +89,16 @@ export default function About() {
           {/* Service items with Framer Motion Tilt */}
           {[
             { 
-              title: "Website Development", 
-              icon: <path d="M9.75 17L9 21h6l-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              title: "Web Developer", 
+              icon: <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             },
             { 
-              title: "App Development", 
-              icon: <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              title: "Frontend Developer", 
+              icon: <path d="M2 7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7zm6 14h8M12 17v4" />
             },
             { 
-              title: "Website Hosting", 
-              icon: <path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+              title: "MERN Stack Developer", 
+              icon: <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             }
           ].map((service, i) => (
             <div key={service.title} ref={el => cardsRef.current[i] = el} className="flex items-start space-x-6">

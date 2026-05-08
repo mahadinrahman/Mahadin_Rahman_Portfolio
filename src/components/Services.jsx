@@ -32,19 +32,19 @@ export default function Services() {
 
   const services = [
     {
-      title: 'Full-Stack Web Development',
-      description: 'End-to-end web applications using React, Node.js, Express, and MongoDB with clean architecture and scalable code.',
-      icon: <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+      title: 'MERN Stack Development',
+      description: 'End-to-end web applications using MongoDB, Express, React, and Node.js with clean architecture and scalable code.',
+      icon: <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
     },
     {
       title: 'Frontend Development',
       description: 'Fast, responsive, and user-friendly interfaces built with React and modern UI frameworks like Tailwind CSS.',
-      icon: <path d="M12 4v16m8-8H4" />
+      icon: <path d="M2 7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7zm6 14h8M12 17v4" />
     },
     {
-      title: 'Backend & API Development',
-      description: 'Secure and efficient REST APIs using Node.js and Express, optimized for performance and scalability.',
-      icon: <path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M4 7V5a2 2 0 012-2h12a2 2 0 012 2v2M4 12h16" />
+      title: 'Web Development',
+      description: 'Comprehensive web solutions tailored for performance and scalability using modern development practices.',
+      icon: <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
     },
     {
       title: 'Database Design & Management',
