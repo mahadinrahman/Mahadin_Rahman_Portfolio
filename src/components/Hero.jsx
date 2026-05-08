@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center mb-4 hero-subtitle">
             <span className="h-[2px] w-12 bg-brand-accent mr-4"></span>
-            <span className="text-2xl md:text-3xl text-brand-muted">I&apos;m Jensen</span>
+            <span className="text-2xl md:text-3xl text-brand-muted">I&apos;m Mahadin</span>
           </div>
           <h2 className="hero-title text-4xl md:text-6xl font-extrabold mb-10 tracking-tight">Software Developer</h2>
           <div className="flex flex-wrap gap-4">
@@ -102,22 +102,64 @@ export default function Hero() {
         </div>
 
         {/* Profile Visual */}
-        <div className="relative flex justify-center items-center" data-purpose="hero-visual">
+        <div 
+          className="relative flex justify-center items-center" 
+          data-purpose="hero-visual"
+          onMouseMove={(e) => {
+            if (!imageRef.current) return;
+            const rect = imageRef.current.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            gsap.to(imageRef.current, {
+              rotateY: x * 0.05,
+              rotateX: -y * 0.05,
+              duration: 0.5,
+              ease: "power2.out",
+            });
+          }}
+          onMouseLeave={() => {
+            gsap.to(imageRef.current, {
+              rotateY: 0,
+              rotateX: 0,
+              duration: 1,
+              ease: "elastic.out(1, 0.3)",
+            });
+          }}
+        >
           {/* Background Decorative Elements */}
-          <div className="absolute top-0 left-0 text-brand-accent opacity-20 text-6xl font-mono select-none">&lt;</div>
-          <div className="absolute bottom-0 right-0 text-brand-accent opacity-20 text-6xl font-mono select-none">&gt;</div>
+          <div className="absolute top-0 left-0 text-brand-accent opacity-10 text-8xl font-mono select-none -translate-x-12 -translate-y-12">&lt;/&gt;</div>
           
           {/* Image Container */}
-          <div ref={imageRef} className="relative w-72 h-72 md:w-96 md:h-96">
-            <div className="profile-ring absolute inset-0 rounded-full border-2 border-brand-accent/30 scale-110"></div>
-            <div className="absolute inset-0 rounded-full border border-brand-accent p-2">
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-brand-dark">
+          <div 
+            ref={imageRef} 
+            className="relative w-72 h-72 md:w-96 md:h-96 -mt-12 md:-mt-20 preserve-3d"
+            style={{ perspective: "1000px" }}
+          >
+            {/* Pulsing Aura */}
+            <div className="absolute inset-0 rounded-full bg-brand-accent/30 blur-[100px] animate-pulse opacity-50"></div>
+            
+            {/* Floating Rings */}
+            <div className="profile-ring absolute inset-[-20px] rounded-full border border-brand-accent/30 scale-110"></div>
+            <div className="profile-ring absolute inset-[-40px] rounded-full border border-brand-accent/10 scale-125 animation-delay-1000"></div>
+            
+            <div className="absolute inset-0 rounded-full border-2 border-brand-accent/50 p-3 bg-background/50 backdrop-blur-sm shadow-[0_0_80px_rgba(217,119,6,0.15)] overflow-hidden">
+              <div className="w-full h-full rounded-full overflow-hidden border-[6px] border-border-main bg-brand-dark relative group">
                 <img 
-                  alt="Jensen Omega" 
-                  className="w-full h-full object-cover sepia-[0.3] hover:sepia-0 transition-all duration-500" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcgMIsZ6hY2Y_DDTQMGQDy6n_LoqAlyQV71KKkesWcPZjy2RlgjKd-uSz8qTT8bHVLA3ndk6LHwFE3MjWEJWTZ0TIgM1rbJfOKehKStTlVmD-gphaRnEqHcYCcq4D6CdixwHcXyjHLqBJkDEI8aEhjIc_ATsZauILlAVkUXVkPNlJOk8qegutaitjPSoLufHmOHP8GfR6l3UGf84IXR98b7HWsITabOYBCyXW09ATC22L7U634C-N0QrGB6XrvdUZmbfzCBY4Hb8Y" 
+                  alt="Mahadin Rahman" 
+                  className="w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105" 
+                  src="/profile.jpg"
+                  style={{ 
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
                 />
+                {/* Overlay shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
               </div>
+            </div>
+            
+            {/* Tag badge */}
+            <div className="absolute -bottom-4 -right-4 bg-brand-accent text-white px-4 py-2 rounded-full text-xs font-bold tracking-tighter shadow-xl">
+              OPEN TO WORK
             </div>
           </div>
         </div>
@@ -125,3 +167,4 @@ export default function Hero() {
     </section>
   );
 }
+

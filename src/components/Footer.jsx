@@ -33,10 +33,9 @@ export default function Footer() {
   }, []);
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#' },
-    { name: 'GitHub', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Email', href: 'mailto:jensen@example.com' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mahadinrahman/' },
+    { name: 'GitHub', href: 'https://github.com/mahadinrahman' },
+    { name: 'Email', href: 'mailto:mahadinrahman333@gmail.com' },
   ];
 
   return (
@@ -61,7 +60,7 @@ export default function Footer() {
         </div>
         
         <div className="text-xs text-brand-muted opacity-50 uppercase tracking-widest">
-          © {currentYear} Jensen Omega. Built with precision.
+          © {currentYear} Mahadin Rahman. Built with precision.
         </div>
       </div>
     </footer>

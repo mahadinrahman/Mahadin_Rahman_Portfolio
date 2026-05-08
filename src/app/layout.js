@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="bg-brand-dark text-stone-100 font-sans selection-accent">
+      <body className="bg-brand-dark text-stone-100 font-sans selection-accent" suppressHydrationWarning>
         <SmoothScroll>
           <CursorFollower />
           {children}

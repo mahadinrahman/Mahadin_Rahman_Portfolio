@@ -36,7 +36,7 @@ export default function Header() {
     >
       <nav className="max-w-6xl mx-auto px-10 h-20 flex items-center justify-between">
         <div className="text-xl font-bold tracking-tight" data-purpose="branding">
-          Jensen <span className="text-brand-accent">Omega</span>
+          Mahadin <span className="text-brand-accent">Rahman</span>
         </div>
         
         {/* Desktop Menu */}
