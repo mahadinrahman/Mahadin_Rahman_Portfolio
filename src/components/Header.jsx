@@ -12,7 +12,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Skills", href: "#skills" },

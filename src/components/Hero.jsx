@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -86,12 +87,12 @@ export default function Hero() {
           </div>
           <h2 className="hero-title text-4xl md:text-6xl font-extrabold mb-10 tracking-tight">Web Developer</h2>
           <div className="flex flex-wrap gap-4">
-            <button
+            <Link href={'#projects'}><button
               ref={el => buttonsRef.current[0] = el}
               className="magnetic-area bg-brand-accent hover:bg-amber-700 transition-all text-white px-8 py-4 rounded-md font-semibold text-sm uppercase tracking-wider accent-glow"
             >
               Get a project?
-            </button>
+            </button></Link>
             <button
               ref={el => buttonsRef.current[1] = el}
               className="magnetic-area border border-white/20 hover:border-white/50 transition-all text-white px-8 py-4 rounded-md font-semibold text-sm uppercase tracking-wider"

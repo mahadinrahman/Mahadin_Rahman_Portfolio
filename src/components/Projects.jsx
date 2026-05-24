@@ -63,18 +63,20 @@ export default function Projects() {
 
   const projectData = [
     {
-      title: 'Battleship',
-      tags: ['HTML', 'CSS', 'Javascript', 'Node.js'],
-      description: "Used components of JavaScript to implement basic data structures through the game of Battleship. Used terminal to display ships and marked where ships are hit or missed.",
+      title: 'IdeaVault',
+      tags: ['Next.js', 'Node.js','Express.js', 'MongoDB', 'Tailwind CSS'],
+      description: "IdeaVault is a web-based platform where users can share innovative startup ideas, explore ideas posted by others, and engage through comments, and discussions. The system encourages creativity, collaboration, and validation of ideas through community interaction.",
       visual: (
-        <div className="aspect-video bg-[#1e1c1b] rounded overflow-hidden p-6 font-mono text-xs text-amber-500/80">
-          <p>&gt; RUN battleship.js</p>
-          <p className="text-brand-accent">HIT!</p>
-          <p className="mt-4">You sank a Cruiser.</p>
+        <div className="aspect-video bg-black flex overflow-hidden rounded">
+          <img 
+            alt="IdeaVault Preview" 
+            className="w-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            src="/p1.png" 
+          />
         </div>
       ),
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/mahadinrahman',
+      demo: 'https://ideavault-gold.vercel.app',
       reverse: false
     },
     {
