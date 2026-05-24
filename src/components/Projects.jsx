@@ -75,40 +75,47 @@ export default function Projects() {
           />
         </div>
       ),
-      github: 'https://github.com/mahadinrahman',
+      github: 'https://github.com/mahadinrahman/ideavault',
       demo: 'https://ideavault-gold.vercel.app',
       reverse: false
     },
     {
-      title: 'Movie Titles API',
-      tags: ['HTML', 'CSS', 'Javascript', 'API', 'Version control'],
-      description: "Uses a public movie API to build a collection movie list that sorts from A to Z or vice versa. It also counts how many movies in each container and adds user's favorite movies into another container.",
+      title: 'SkillSphere',
+      tags: ['Next.js','MongoDB', 'Tailwind CSS','JavaScript'],
+      description: "SkillSphere is a  modern online learning platform where users can explore courses, watch lessons, and enroll in skill-based programs like Web Development, Design, Marketing, and more.",
       visual: (
         <div className="aspect-video bg-black flex overflow-hidden rounded">
           <img 
-            alt="Movie UI" 
-            className="w-full object-cover sepia-[0.3]" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_Mg449Tx1_QsIDYSfpvahcRlRVaRcn31fiTjprma2TsimwfEOtrWPgr2PqApTreM8XYambIxNk_xg0BDxzF33Nabwt2amql0yi9i8a1OqF4eB4mt-VI8r0ikSUCrwfbkZMtC7-QyE0us-hGaRQtR1pbfiqQd1338XaWkEvNC_7_3_1Vlsl7qvW-HeAHNRfYgrDdFkiZo2n6m1tRUGE9kTm6xQJkVbSJyPpIMbMK24QRWuVXgMckrem7U5qWy9iKWBu4zFacUQfU" 
+            alt="SkillSphere Preview" 
+            className="w-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            src="/p2.png" 
           />
         </div>
       ),
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/mahadinrahman/skillsphere-online-learning-platform',
+      demo: 'https://skillsphere-online-learning-platfor-topaz.vercel.app',
       reverse: true
     },
+   
     {
-      title: 'Javascript Calculator',
-      tags: ['HTML', 'CSS', 'Javascript', 'Node.js'],
-      description: "Uses simple algorithm concepts in JavaScript to produce an arithmetic result in a terminal.",
+      title: 'Pixgen',
+      tags: ['Next.js','MongoDB', 'Tailwind CSS','JavaScript'],
+      description: "PixGen is a website where users can explore different creative ideas and inspirations for generating images. It helps people discover unique prompts, styles, and concepts for AI image creation, making the creative process faster, easier, and more enjoyable. With PixGen, users can save time and generate better visual ideas effortlessly.",
       visual: (
-        <div className="aspect-video bg-[#1e1c1b] rounded overflow-hidden p-6 font-mono text-xs text-amber-500">
-          <p>console.log('The result is: ' + (a + b));</p>
+        <div className="aspect-video bg-black flex overflow-hidden rounded">
+          <img 
+            alt="Pixgen Preview" 
+            className="w-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            src="/p3.png" 
+          />
         </div>
       ),
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/mahadinrahman/pixgen',
+      demo: 'https://pixgen-lime.vercel.app',
       reverse: false
     },
+   
+    
     {
       title: 'SaaS Landing Page',
       tags: ['HTML', 'CSS'],
