@@ -100,7 +100,7 @@ export default function Projects() {
     {
       title: 'Pixgen',
       tags: ['Next.js','MongoDB', 'Tailwind CSS','JavaScript'],
-      description: "PixGen is a website where users can explore different creative ideas and inspirations for generating images. It helps people discover unique prompts, styles, and concepts for AI image creation, making the creative process faster, easier, and more enjoyable. With PixGen, users can save time and generate better visual ideas effortlessly.",
+      description: "Pixgen is a website where users can explore different creative ideas and inspirations for generating images. It helps people discover unique prompts, styles, and concepts for AI image creation, making the creative process faster, easier, and more enjoyable. With PixGen, users can save time and generate better visual ideas effortlessly.",
       visual: (
         <div className="aspect-video bg-black flex overflow-hidden rounded">
           <img 
@@ -116,26 +116,6 @@ export default function Projects() {
     },
    
     
-    {
-      title: 'SaaS Landing Page',
-      tags: ['HTML', 'CSS'],
-      description: "Used HTML concepts such as creating a form and a basic skeleton. It also used components of both the grid and flexbox elements to produce a landing page.",
-      visual: (
-        <div className="aspect-video bg-white text-stone-900 p-8 rounded overflow-hidden flex flex-col justify-center shadow-inner">
-          <div className="mb-4">
-            <span className="text-amber-700 font-bold text-xl tracking-tighter">Front.</span>
-          </div>
-          <h4 className="text-2xl font-extrabold leading-tight mb-2">Empowering teams with the freedom</h4>
-          <p className="text-stone-500 text-xs">See the performance of the web development.</p>
-          <div className="mt-4">
-            <span className="bg-amber-700 text-white px-4 py-2 rounded text-[10px] font-bold uppercase">Buy Now</span>
-          </div>
-        </div>
-      ),
-      github: '#',
-      demo: '#',
-      reverse: true
-    }
   ];
 
   return (
