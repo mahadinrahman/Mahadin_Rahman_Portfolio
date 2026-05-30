@@ -114,7 +114,7 @@ export default function Projects() {
       demo: 'https://pixgen-lime.vercel.app',
       reverse: false
     },
-   
+    
     
   ];
 
