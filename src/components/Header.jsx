@@ -15,8 +15,8 @@ export default function Header() {
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Education", href: "#education" },
-    { name: "Services", href: "#services" },
     { name: "Skills", href: "#skills" },
+    { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
