@@ -93,12 +93,12 @@ export default function Hero() {
             >
               Get a project?
             </button></Link>
-            <button
+            <Link href={'https://drive.google.com/file/d/1HW2x8kQ9ABCgXXGF2opUjo9c0smFVBud/view?usp=drive_link'}><button 
               ref={el => buttonsRef.current[1] = el}
               className="magnetic-area border border-white/20 hover:border-white/50 transition-all text-white px-8 py-4 rounded-md font-semibold text-sm uppercase tracking-wider"
             >
               My resume
-            </button>
+            </button></Link>
           </div>
         </div>
 
